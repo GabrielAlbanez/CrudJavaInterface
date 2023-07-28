@@ -1,8 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Roboto , Poppins   } from 'next/font/google'
+import { Roboto, Poppins } from 'next/font/google'
 import NavBar from "./components/navbar/Navbar"
 import ClientOnly from "./components/ClientOnly"
+import ContadorProvider from "./Context/ContadorProdutos"
 
 const roboto = Roboto({
   weight: '700',
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ClientOnly>
-      <NavBar/>
+        <ContadorProvider>
+          <NavBar />
+        </ContadorProvider>
       </ClientOnly>
       <body className={poppins.className}>{children}</body>
     </html>

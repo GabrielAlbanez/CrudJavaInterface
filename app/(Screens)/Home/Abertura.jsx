@@ -1,7 +1,9 @@
 import React from 'react'
+import CreateCard from "../../components/CreateCard/CreateCard"
 
-export default function Abertura() {
+export default async function Abertura() {
+
   return (
-    <div>Abertura</div>
+    <CreateCard/>
   )
 }
